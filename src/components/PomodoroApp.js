@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BreakInterval from "./BreakInterval"
+import BreakTime from "./BreakTime"
 
 console.log('test');
 
@@ -19,7 +19,7 @@ class PomodoroApp extends React.Component {
         <div>
             <main>
             It's work !
-            <BreakInterval test={this.state.breakLength} />
+            <BreakTime break={this.state.breakLength} />
             </main>
         </div>
     );
