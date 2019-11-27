@@ -1,0 +1,12 @@
+$primary-color: white;
+$bg: black;
+h1 {
+  color: $primary-color;
+  background-color: $bg;
+}
+body{
+  background-color: red;
+  .work{
+    color:green;
+  }
+}
