@@ -12,7 +12,7 @@ class PomodoroApp extends React.Component {
 
         this.state = {
             breakLength : 5,
-            sessionLength: 20
+            pomodoroLength: 20
         }
     }
  render(){
@@ -21,7 +21,7 @@ class PomodoroApp extends React.Component {
             <main>
             It's work !
             <BreakTime break={this.state.breakLength} />
-            <PomodoroTime pomodoro={this.state.sessionLength} />
+            <PomodoroTime pomodoro={this.state.pomodoroLength} />
             </main>
         </div>
     );
