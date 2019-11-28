@@ -1,8 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import BreakTime from "./BreakTime";
-import PomodoroTime from "./PomodoroTime";
-import Timer from "./Timer";
+import BreakTime from "./break-time";
+import PomodoroTime from "./pomodoro-time";
+import Timer from "./timer";
 
 class PomodoroApp extends React.Component {
   constructor() {
