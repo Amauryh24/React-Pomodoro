@@ -16,9 +16,19 @@ export default function PomodoroTime(props) {
 
   return (
     <section>
-      <button onClick={decreaseCounter}>Down</button>
+      <button
+        disabled={props.isPlay === true ? "disabled" : ""}
+        onClick={decreaseCounter}
+      >
+        Down
+      </button>
       <p> {props.pomodoro} </p>
-      <button onClick={increaseCounter}>Up</button>
+      <button
+        disabled={props.isPlay === true ? "disabled" : ""}
+        onClick={increaseCounter}
+      >
+        Up
+      </button>
     </section>
   );
 }

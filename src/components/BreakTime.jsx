@@ -15,9 +15,19 @@ function BreakTime(props) {
   }
   return (
     <section>
-      <button onClick={decreaseCounter}>Down</button>
+      <button
+        disabled={props.isPlay === true ? "disabled" : ""}
+        onClick={decreaseCounter}
+      >
+        Down
+      </button>
       <h3> {props.break} </h3>
-      <button onClick={increaseCounter}>Up</button>
+      <button
+        disabled={props.isPlay === true ? "disabled" : ""}
+        onClick={increaseCounter}
+      >
+        Up
+      </button>
     </section>
   );
 }
