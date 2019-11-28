@@ -11,18 +11,22 @@ class PomodoroApp extends React.Component {
     this.state = {
       breakLength: 5,
       pomodoroLength: 25,
-      timerMinutes: 25
+      timerMinutes: 25,
+      isPlay: false
     };
 
     this.upBreakTime = this.upBreakTime.bind(this);
     this.downBreakTime = this.downBreakTime.bind(this);
 
+
     this.upPomodoroTime = this.upPomodoroTime.bind(this);
     this.downPomodoroTime = this.downPomodoroTime.bind(this);
+
 
     this.onToggleInterval = this.onToggleInterval.bind(this);
     this.onUpdateTimerMinute = this.onUpdateTimerMinute.bind(this);
     this.onResetTimer = this.onResetTimer.bind(this);
+    this.onPlayStopTimer = this.onPlayStopTimer.bind(this);
   }
   upBreakTime() {
     this.setState(par => {
@@ -78,18 +82,26 @@ class PomodoroApp extends React.Component {
       timerMinutes: this.state.pomodoroLength
     });
   }
+    onPlayStopTimer(isPlay){
+        this.setState({
+            isPlay:isPlay
+        })
+    }
+
 
   render() {
     return (
       <div>
         <main>
           <BreakTime
+            isPlay={this.state.isPlay} // disable button when break is working
             break={this.state.breakLength}
             increaseCounter={this.upBreakTime}
             decreaseCounter={this.downBreakTime}
           />
 
           <PomodoroTime
+            isPlay={this.state.isPlay} // disable button when pomo is working
             pomodoro={this.state.pomodoroLength}
             increaseCounter={this.upPomodoroTime}
             decreaseCounter={this.downPomodoroTime}
@@ -101,6 +113,7 @@ class PomodoroApp extends React.Component {
             UpdateTimerMinute={this.onUpdateTimerMinute}
             ToggleInterval={this.onToggleInterval}
             resetTimer={this.onResetTimer}
+            onplayStopTimer={this.onPlayStopTimer}
           />
         </main>
       </div>

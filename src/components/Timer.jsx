@@ -17,7 +17,7 @@ class Timer extends React.Component {
 
   playTimer() {
     let intervalId = setInterval(this.decreaseTimer, 1000);
-
+    this.props.onplayStopTimer(true);
     this.setState({
       intervalId: intervalId
     });
@@ -25,10 +25,27 @@ class Timer extends React.Component {
   decreaseTimer() {
     switch (this.state.timerSecondes) {
       case 0:
-        this.props.UpdateTimerMinute();
-        this.setState({
-          timerSecondes: 59
-        });
+        if (this.props.timerMinutes === 0) {
+          if (this.state.isPomodoro) {
+            this.setState({
+              isPomodoro: false
+            });
+
+            this.props.ToggleInterval(this.state.isPomodoro);
+          } else {
+            this.setState({
+              isPomodoro: true
+            });
+
+            this.props.ToggleInterval(this.state.isPomodoro);
+          }
+        } else {
+          this.props.UpdateTimerMinute();
+          this.setState({
+            timerSecondes: 59
+          });
+        }
+
         break;
 
       default:
@@ -42,15 +59,17 @@ class Timer extends React.Component {
   }
   stopTimer() {
     clearInterval(this.state.intervalId);
+    this.props.onplayStopTimer(false);
   }
   resetTimer() {
     this.stopTimer();
     this.props.resetTimer();
+    this.props.onplayStopTimer(false);
     this.setState({
-      timerSecondes: 0
+      timerSecondes: 0,
+      isPomodoro: true
     });
   }
-
   render() {
     return (
       <section>
