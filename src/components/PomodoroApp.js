@@ -58,6 +58,7 @@ class PomodoroApp extends React.Component {
       return {
         timerMinutes: par.timerMinutes - 1
       };
+      TimerMinute();
     });
   }
   onToggleInterval(isPomodoro) {
@@ -91,8 +92,8 @@ class PomodoroApp extends React.Component {
           <Timer
             timerMinutes={this.state.timerMinutes}
             breakLength={this.state.breakLength}
-            UpdateTimerMinute={this.state.onUpdateTimerMinute}
-            ToggleInterval={this.state.onToggleInterval}
+            UpdateTimerMinute={this.onUpdateTimerMinute}
+            ToggleInterval={this.onToggleInterval}
           />
         </main>
       </div>

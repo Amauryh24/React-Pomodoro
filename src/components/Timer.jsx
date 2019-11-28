@@ -6,9 +6,39 @@ class Timer extends React.Component {
 
     this.state = {
       isPomodoro: true,
-      timerSecondes: 0
+      timerSecondes: 0,
+      intervalId: 0
     };
+    this.playTimer = this.playTimer.bind(this);
+    this.decreaseTimer = this.decreaseTimer.bind(this);
   }
+
+  playTimer() {
+    let intervalId = setInterval(this.decreaseTimer, 1000);
+
+    this.setState({
+      intervalId: intervalId
+    });
+  }
+  decreaseTimer() {
+    switch (this.state.timerSecondes) {
+      case 0:
+        this.props.UpdateTimerMinute();
+        this.setState({
+          timerSecondes: 59
+        });
+        break;
+
+      default:
+        this.setState(par => {
+          return {
+            timerSecondes: par.timerSecondes - 1
+          };
+        });
+        break;
+    }
+  }
+  stop() {}
 
   render() {
     return (
@@ -23,9 +53,9 @@ class Timer extends React.Component {
             ? "0" + timerSecondes
             : this.state.timerSecondes}
         </span>
-        <button>play</button>
-        <button>stop</button>
-        <button>refresh</button>
+        <button onClick={this.playTimer}>play</button>
+        <button onClick={this.stop}>stop</button>
+        <button onClick={this.refresh}>refresh</button>
       </section>
     );
   }
