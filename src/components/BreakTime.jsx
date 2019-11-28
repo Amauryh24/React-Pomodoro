@@ -1,24 +1,25 @@
 import React from "react";
 
-export default function PomodoroTime(props) {
+function BreakTime(props) {
   function decreaseCounter() {
-    if (props.pomodoro === 1) {
+    if (props.break === 1) {
       return;
     }
     props.decreaseCounter();
   }
   function increaseCounter() {
-    if (props.pomodoro === 60) {
+    if (props.break === 60) {
       return;
     }
     props.increaseCounter();
   }
-
   return (
     <section>
       <button onClick={decreaseCounter}>Down</button>
-      <p> {props.pomodoro} </p>
+      <h3> {props.break} </h3>
       <button onClick={increaseCounter}>Up</button>
     </section>
   );
 }
+
+export default BreakTime;
