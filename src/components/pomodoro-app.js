@@ -93,6 +93,7 @@ class PomodoroApp extends React.Component {
     return (
       <div>
         <main>
+        <div class="section-settings">
           <BreakTime
             isPlay={this.state.isPlay} // disable button when break is working
             break={this.state.breakLength}
@@ -106,7 +107,8 @@ class PomodoroApp extends React.Component {
             increaseCounter={this.upPomodoroTime}
             decreaseCounter={this.downPomodoroTime}
           />
-
+</div>
+<div>
           <Timer
             timerMinutes={this.state.timerMinutes}
             breakLength={this.state.breakLength}
@@ -115,6 +117,7 @@ class PomodoroApp extends React.Component {
             resetTimer={this.onResetTimer}
             onplayStopTimer={this.onPlayStopTimer}
           />
+          </div>
         </main>
       </div>
     );
