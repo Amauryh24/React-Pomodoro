@@ -15,6 +15,7 @@ h1{
   font-family: 'Lobster', cursive;
   text-align: center;
   letter-spacing: 0.08em;
+  margin:0;
   
   .title-pomodoro{
     color:red;
@@ -49,7 +50,7 @@ a{
   width:30px;
   height: 30px;
   border-radius: 50%;
-  border:2px solid black;
+  border:1px solid black;
   cursor: pointer;
   padding: 10px;
   margin: 10px;
@@ -66,6 +67,46 @@ a{
 
   a:disabled{
     cursor: not-allowed;
+  }
+
+  .section-timer{
+    
+    margin:0 auto;
+    h3{
+      text-align: center;
+      margin:0;
+      font-family: "Lobster";
+    }
+   
+   
+.timer{
+  border:1px solid red;
+  width:300px;
+  height: 300px;
+  margin:0 auto;
+  border-radius: 50%;
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Lobster', cursive;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+.title-timer{
+  display: block;
+}
+  .minutes{
+    text-align: center;
+    width:180px;
+  }
+  .separateur{
+    text-align: center;
+    width:10%;
+  }
+  .secondes{
+    text-align: center;
+    width:180px;
+  }
+}
   }
 }
 
