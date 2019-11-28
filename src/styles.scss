@@ -1,14 +1,22 @@
 $primary-color: white;
 $bg: black;
-h1 {
-  color: $primary-color;
-  background-color: $bg;
-}
+@font-face {
+  font-family: "Lobster";
+  src: url("../public/fonts/Lobster/Lobster-Regular.ttf") format("truetype"),     
+ }
+
 body{
-  background-color: red;
-  .work{
-    color:green;
-  }
+  
+  background: linear-gradient(351deg, rgba(34,34,34,1) 0%, rgba(97,218,251,1) 100%);
+
+h1{
+  font-size:48px;
+  font-family: 'Lobster', cursive;
+  text-align: center;
+  letter-spacing: 0.08em;
+}
+
+
   button:disabled{
     cursor: not-allowed;
   }
