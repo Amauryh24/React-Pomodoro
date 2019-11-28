@@ -10,7 +10,7 @@ class PomodoroApp extends React.Component {
 
     this.state = {
       breakLength: 5,
-      pomodoroLength: 20,
+      pomodoroLength: 25,
       timerMinutes: 25
     };
 
@@ -100,7 +100,7 @@ class PomodoroApp extends React.Component {
             breakLength={this.state.breakLength}
             UpdateTimerMinute={this.onUpdateTimerMinute}
             ToggleInterval={this.onToggleInterval}
-            ResetTimer={this.onResetTimer}
+            resetTimer={this.onResetTimer}
           />
         </main>
       </div>
