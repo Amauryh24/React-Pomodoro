@@ -22,6 +22,7 @@ class PomodoroApp extends React.Component {
 
     this.onToggleInterval = this.onToggleInterval.bind(this);
     this.onUpdateTimerMinute = this.onUpdateTimerMinute.bind(this);
+    this.onResetTimer = this.onResetTimer.bind(this);
   }
   upBreakTime() {
     this.setState(par => {
@@ -72,6 +73,11 @@ class PomodoroApp extends React.Component {
       });
     }
   }
+  onResetTimer() {
+    this.setState({
+      timerMinutes: this.state.pomodoroLength
+    });
+  }
 
   render() {
     return (
@@ -94,6 +100,7 @@ class PomodoroApp extends React.Component {
             breakLength={this.state.breakLength}
             UpdateTimerMinute={this.onUpdateTimerMinute}
             ToggleInterval={this.onToggleInterval}
+            ResetTimer={this.onResetTimer}
           />
         </main>
       </div>
