@@ -54,19 +54,19 @@ class PomodoroApp extends React.Component {
     }
     onToggleInterval(isPomodoro) {
         if (isPomodoro) {
-            this.setState({
-                timerMinutes: this.state.pomodoroLength,
-            });
+            this.setState(previousState => ({
+                timerMinutes: previousState.pomodoroLength,
+            }));
         } else {
-            this.setState({
-                timerMinutes: this.state.breakLength,
-            });
+            this.setState(previousState => ({
+                timerMinutes: previousState.breakLength,
+            }));
         }
     }
     onResetTimer() {
-        this.setState({
-            timerMinutes: this.state.pomodoroLength,
-        });
+        this.setState(previousState => ({
+            timerMinutes: previousState.pomodoroLength,
+        }));
     }
     onPlayStopTimer(isPlay) {
         this.setState({
