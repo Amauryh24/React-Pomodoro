@@ -39,17 +39,14 @@ h1{
     font-size: 24px;
   }
 }
-h2{
-  text-align: center;
-  font-family: 'Ibm', cursive;
-}
+
 .section-settings{
   display: flex;
   justify-content: space-around;
 }
 
-
-.break-time, .pomodoro-time{
+.section-break-time{
+  .break-time{
     display: flex;
     align-items: center;
 
@@ -57,8 +54,32 @@ h2{
       width:20px;
       padding:0 10px;
       text-align: center;
+      color:$pink;
+      font-size: 18px;
+      font-family: "Lobster";
+    }
+    h2{
+      text-align: center;
+      font-family: 'Ibm', cursive;
+      color:red;
     }
 }
+}
+
+.pomodoro-time{
+  display: flex;
+  align-items: center;
+
+  p{
+    width:20px;
+    padding:0 10px;
+    text-align: center;
+    color:$pink;
+    font-size: 18px;
+    font-family: "Lobster";
+  }
+}
+
 
 button{
   width:50px;
@@ -94,16 +115,17 @@ button{
       text-align: center;
       margin:0;
       font-family: "Ibm";
+      color:$pink;
     }
    
    
 .timer{
   border:1px solid $pastel;
-  width:300px;
-  height: 300px;
+  width:250px;
+  height: 250px;
   margin:0 auto;
   border-radius: 50%;
-  font-size: 100px;
+  font-size: 80px;
   text-align: center;
   font-family: 'Lobster', cursive;
   display: flex;
@@ -125,6 +147,13 @@ button{
     width:180px;
   }
 }
+
+.settings-timer{
+  width:300px;
+  margin:0 auto;
+  text-align:center
+}
+
   }
 }
 
