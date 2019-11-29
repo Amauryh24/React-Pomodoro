@@ -87,7 +87,10 @@ class Timer extends React.Component {
                     </p>
                 </div>
                 <div className={"settings-timer"}>
-                    <button type={"button"} onClick={() => this.playTimer()}>
+                    <button
+                        className={"play-timer"}
+                        type={"button"}
+                        onClick={() => this.playTimer()}>
                         <svg
                             xmlns={"http://www.w3.org/2000/svg"}
                             viewBox={"0 0 20 20"}>

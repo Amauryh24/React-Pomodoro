@@ -23,17 +23,8 @@ body{
   width:80%;
   margin:0 auto;
   background-color: $turquoise1;
-@keyframes titre-h1 {
-  0%{
-    transform: translateY(-204px);
-  }
-  95%{
-    transform: translateY(5px);
-  }
-  100%{
-    transform: translateY(0px);
-  }
-}
+
+
 h1{
   font-size:48px;
   font-family: 'Lobster', cursive;
@@ -51,6 +42,17 @@ h1{
     display: block;
     font-size: 24px;
   }
+  @keyframes titre-h1 {
+    0%{
+      transform: translateY(-204px);
+    }
+    95%{
+      transform: translateY(5px);
+    }
+    100%{
+      transform: translateY(0px);
+    }
+  }
 }
 
 .section-settings{
@@ -59,6 +61,20 @@ h1{
 }
 
 .section-break-time{
+  @keyframes sectionbreak {
+    0%{
+      transform: translateX(-300px);
+      opacity:0;
+    }
+    95%{
+      transform: translatex(2px);
+    }
+    100%{
+      transform: translatex(0px);
+    }
+  }
+  animation-name: sectionbreak;
+  animation-duration: 1s;
   h2{
     text-align: center;
     font-family: 'Ibm', cursive;
@@ -79,20 +95,45 @@ h1{
    
 }
 }
+.section-pomodoro-time{
+  @keyframes sectionpomodoro {
+    0%{
+      transform: translateX(300px);
+      opacity: 0;
+    }
+    95%{
+      transform: translatex(-2px);
+    }
+    100%{
+      transform: translatex(0px);
+    }
+  }
+animation-name: sectionpomodoro;
+animation-duration: 1s;
+transition: ease-in;
 
-.pomodoro-time{
-  display: flex;
-  align-items: center;
 
-  p{
-    width:20px;
-    padding:0 10px;
+
+  h2{
     text-align: center;
-    color:$pink;
-    font-size: 18px;
-    font-family: "Lobster";
+      font-family: 'Ibm', cursive;
+      color:$pink;
+  }
+  .pomodoro-time{
+    display: flex;
+    align-items: center;
+  
+    p{
+      width:20px;
+      padding:0 10px;
+      text-align: center;
+      color:$pink;
+      font-size: 18px;
+      font-family: "Lobster";
+    }
   }
 }
+
 
 
 button{
@@ -123,7 +164,21 @@ button{
   }
 
   .section-timer{
-    
+    @keyframes sectiontimer {
+      0%{
+        transform: translatey(-400px);
+        opacity: 0;
+      }
+      95%{
+        transform: translatey(2px);
+      }
+      100%{
+        transform: translatey(0px);
+      }
+    }
+animation-name: sectiontimer;
+animation-duration: 1s;
+
     margin:0 auto;
     h3{
       text-align: center;
@@ -134,7 +189,9 @@ button{
    
    
 .timer{
-  border:1px solid $pastel;
+  background: radial-gradient(circle, rgba(202,255,185,1) 0%, rgba(102,161,130,1) 75%);
+
+  border:3px dotted $pastel;
   width:250px;
   height: 250px;
   margin:0 auto;
@@ -165,7 +222,14 @@ button{
 .settings-timer{
   width:300px;
   margin:0 auto;
-  text-align:center
+  text-align:center;
+
+  .play-timer{
+    svg{
+      transform: translateX(2px);
+    }
+   
+  }
 }
 
   }
