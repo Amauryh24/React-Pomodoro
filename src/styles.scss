@@ -1,14 +1,28 @@
 $primary-color: white;
 $bg: black;
+
+$pink: #FFDAB5;
+$turquoise1: #66A182;
+$turquoise2:#CAFFB9;
+$pastel:#AEF78E;
+$green:#C0D461;
+
+
+
 @font-face {
   font-family: "Lobster";
   src: url("../public/fonts/Lobster/Lobster-Regular.ttf") format("truetype"),     
+ }
+ @font-face {
+  font-family: "Ibm";
+  src: url("../public/fonts/Ibm/IBMPlexSans-Medium.ttf") format("truetype"),     
  }
 
 body{
   
   width:80%;
   margin:0 auto;
+  background-color: $turquoise1;
 
 h1{
   font-size:48px;
@@ -16,9 +30,9 @@ h1{
   text-align: center;
   letter-spacing: 0.08em;
   margin:0;
-  
+  color:$pink;
   .title-pomodoro{
-    color:red;
+    color:$green; 
   }
   .title-react{
     display: block;
@@ -27,7 +41,7 @@ h1{
 }
 h2{
   text-align: center;
-  font-family: 'Lobster', cursive;
+  font-family: 'Ibm', cursive;
 }
 .section-settings{
   display: flex;
@@ -46,26 +60,30 @@ h2{
     }
 }
 
-a{
-  width:30px;
-  height: 30px;
+button{
+  width:50px;
+  height: 50px;
   border-radius: 50%;
-  border:1px solid black;
+  border:1px solid #ABEE8E;
   cursor: pointer;
-  padding: 10px;
+  padding: 5px;
   margin: 10px;
-  box-shadow: 0px 0px 5px black;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.411);
+  background-color:#CAFFB9;
 
   svg{
-    color:red;
+    fill:#66A182;
   }
   &:hover{
-    background-color: rgb(109, 227, 248);
+    background-color: $pastel;
+    transform: scale(1.1);
+    transition: 0.2s ease-in-out;
+
   }
 }
 
 
-  a:disabled{
+  button:disabled{
     cursor: not-allowed;
   }
 
@@ -75,12 +93,12 @@ a{
     h3{
       text-align: center;
       margin:0;
-      font-family: "Lobster";
+      font-family: "Ibm";
     }
    
    
 .timer{
-  border:1px solid red;
+  border:1px solid $pastel;
   width:300px;
   height: 300px;
   margin:0 auto;

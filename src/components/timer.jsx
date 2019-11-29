@@ -72,12 +72,12 @@ class Timer extends React.Component {
   }
   render() {
     return (
-      <section class="section-timer">
+      <section className="section-timer">
         <h3> {this.state.isPomodoro === true ? "Pomodoro" : "Break"} </h3>
-        <div class="timer">
-          <p class="minutes"> {this.props.timerMinutes} </p>
-          <p class="separateur">:</p>
-          <p class="secondes">
+        <div className="timer">
+          <p className="minutes"> {this.props.timerMinutes} </p>
+          <p className="separateur">:</p>
+          <p className="secondes">
             {this.state.timerSecondes === 0
               ? "00"
               : this.state.timerSecondes < 10
@@ -86,9 +86,17 @@ class Timer extends React.Component {
           </p>
         </div>
         <div>
-          <button onClick={this.playTimer}>play</button>
-          <button onClick={this.stopTimer}>stop</button>
-          <button onClick={this.resetTimer}>reset</button>
+          <button onClick={this.playTimer}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M4 4l12 6-12 6z" />
+            </svg>
+          </button>
+          <button onClick={this.stopTimer}>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M5 4h3v12H5V4zm7 0h3v12h-3V4z" />
+            </svg>
+          </button>
+          <button onClick={this.resetTimer}><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 3v2a5 5 0 0 0-3.54 8.54l-1.41 1.41A7 7 0 0 1 10 3zm4.95 2.05A7 7 0 0 1 10 17v-2a5 5 0 0 0 3.54-8.54l1.41-1.41zM10 20l-4-4 4-4v8zm0-12V0l4 4-4 4z"/></svg></button>
         </div>
       </section>
     );
