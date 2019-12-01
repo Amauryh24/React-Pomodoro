@@ -1,6 +1,6 @@
 # Pomodoro
 
-> web : [amauryh24pomodoro](https://amauryh24pomodoro.netlify.com/)
+> Web : [amauryh24pomodoro](https://amauryh24pomodoro.netlify.com/)
 
 > Technos : [React](https://reactjs.org/) && [Sass](https://sass-lang.com/)
 
