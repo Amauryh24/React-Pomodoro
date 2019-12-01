@@ -2,7 +2,7 @@
 
 > web : [amauryh24pomodoro](https://amauryh24pomodoro.netlify.com/)
 
-> Technos : React && Sass
+> Technos : [React](https://reactjs.org/) && [Sass](https://sass-lang.com/)
 
 ## Building and running on localhost
 
