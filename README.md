@@ -1,6 +1,7 @@
 # Pomodoro
 
-> [amauryh24pomodoro](https://amauryh24pomodoro.netlify.com/)
+> web : [amauryh24pomodoro](https://amauryh24pomodoro.netlify.com/)
+
 > Technos : React && Sass
 
 ## Building and running on localhost
