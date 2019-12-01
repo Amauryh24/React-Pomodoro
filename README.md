@@ -1,6 +1,7 @@
-# empty-project
+# Pomodoro
 
-Empty project.
+> [amauryh24pomodoro](https://amauryh24pomodoro.netlify.com/)
+> Technos : React && Sass
 
 ## Building and running on localhost
 
@@ -22,11 +23,6 @@ To create a production build:
 npm run build-prod
 ```
 
-## Running
-
-Open the file `dist/index.html` in your browser
-
 ## Credits
 
 Made with [createapp.dev](https://createapp.dev/)
-
