@@ -1,0 +1,26 @@
+
+Pomodoro
+gaa
+gcm git commit
+
+commande d'un autre programme (hub) 
+git creat nomgit/nomdossier
+
+-------------------------------------
+npm init -y 
+- configure le package.json
+create file .babelrc
+
+nisd parcel-bundler
+npm install -save -d parcel-bundler
+
+--------------------------------------
+cat ~/ .gitignore_global
+nis react react-dom
+
+------------------------------------
+
+faire de la déstructuration
+propTypes : vérifier en direct qu'on a le bon type de composant
+npm install propTypes
+
