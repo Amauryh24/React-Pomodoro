@@ -23,4 +23,14 @@ nis react react-dom
 faire de la déstructuration
 propTypes : vérifier en direct qu'on a le bon type de composant
 npm install propTypes
+PropsDrilling
+
+useseffect : mécanisque de nettoyage d'effet de bord
+attention quand le composant disparait, faut arrête le intervalId
+
+à achaque fois qu'on rappel la fonction, ça affecte la mémoire,
+utiliser useCallback avec comme 1er argument la fonction du callball et 2 argument un tableau
+
+react portal,, injecter du code de composant dans un noeud du dom qui fait pas partie de l'app
+
 
